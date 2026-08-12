@@ -74,7 +74,7 @@ body::before {
 }
 
 .nav-logo {
-  height: 38px;
+  height: 70px;
   width: auto;
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
   transition: transform 0.3s ease;
@@ -87,7 +87,7 @@ body::before {
 /* ===== NAV ===== */
 nav {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
@@ -96,10 +96,10 @@ nav {
 nav a {
   text-decoration: none;
   color: #f3ede8;
-  font-size: 0.6rem;
-  letter-spacing: 2.5px;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
   opacity: 0.7;
   transition: all 0.3s ease;
   position: relative;
@@ -147,8 +147,8 @@ nav a.active::after {
 }
 
 .logo {
-  width: 120px;
-  max-width: 35vw;
+  width: 220px;
+  max-width: 45vw;
   height: auto;
   filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
   transition: transform 0.4s ease;
@@ -160,7 +160,7 @@ nav a.active::after {
 
 h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 4.2rem;
+  font-size: 4.8rem;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 1px;
@@ -170,7 +170,7 @@ h1 {
 
 .page-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 700;
   text-align: center;
   margin: 6px 0 4px;
@@ -180,8 +180,8 @@ h1 {
 .sub-title {
   text-align: center;
   opacity: 0.75;
-  letter-spacing: 3px;
-  font-size: 0.7rem;
+  letter-spacing: 4px;
+  font-size: 0.85rem;
   text-transform: uppercase;
   margin-bottom: 20px;
   font-weight: 300;
@@ -196,13 +196,13 @@ h1 {
 }
 
 .tagline {
-  font-size: 0.7rem;
-  letter-spacing: 4px;
+  font-size: 0.85rem;
+  letter-spacing: 5px;
   text-transform: uppercase;
   opacity: 0.75;
   font-weight: 300;
   background: rgba(30, 26, 31, 0.5);
-  padding: 6px 18px;
+  padding: 8px 22px;
   border-radius: 30px;
   backdrop-filter: blur(4px);
   border: 1px solid rgba(235, 200, 180, 0.15);
@@ -210,9 +210,9 @@ h1 {
 }
 
 .ornament {
-  font-size: 1rem;
+  font-size: 1.2rem;
   opacity: 0.3;
-  letter-spacing: 8px;
+  letter-spacing: 10px;
   color: #d9a58b;
 }
 
@@ -221,7 +221,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 14px 24px;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   opacity: 0.85;
 }
 
@@ -239,12 +239,12 @@ h1 {
 /* ===== BUTTON ===== */
 .btn {
   display: inline-block;
-  padding: 12px 36px;
+  padding: 14px 42px;
   border: 1px solid rgba(243, 237, 232, 0.6);
   color: #f3ede8;
   text-decoration: none;
-  font-size: 0.65rem;
-  letter-spacing: 3px;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
   text-transform: uppercase;
   font-weight: 400;
   transition: all 0.35s ease;
@@ -289,27 +289,27 @@ h1 {
 .menu-section {
   background: rgba(255, 255, 255, 0.04);
   border-radius: 12px;
-  padding: 14px 16px 12px;
-  margin-bottom: 18px;
+  padding: 18px 20px 16px;
+  margin-bottom: 20px;
   border: 1px solid rgba(235, 200, 180, 0.08);
   backdrop-filter: blur(2px);
 }
 
 .menu-section h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 600;
   border-bottom: 1px solid rgba(235, 200, 180, 0.15);
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
   letter-spacing: 0.5px;
 }
 
 .menu-section h3 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 400;
-  margin: 8px 0 5px;
+  margin: 10px 0 6px;
   color: #d9a58b;
   letter-spacing: 0.5px;
 }
@@ -317,21 +317,21 @@ h1 {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 th {
   text-align: left;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   opacity: 0.6;
-  padding-bottom: 4px;
-  font-size: 0.6rem;
+  padding-bottom: 5px;
+  font-size: 0.7rem;
   text-transform: uppercase;
 }
 
 td {
-  padding: 4px 3px;
+  padding: 5px 4px;
   border-bottom: 1px solid rgba(235, 200, 180, 0.06);
 }
 
@@ -348,15 +348,15 @@ tr:last-child td {
 .grid-2col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 18px;
 }
 
 /* ===== GALLERY ===== */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 12px;
-  margin: 16px 0;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+  margin: 18px 0;
 }
 
 .gallery-grid div {
@@ -384,9 +384,9 @@ tr:last-child td {
 form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  max-width: 440px;
-  margin: 8px auto;
+  gap: 14px;
+  max-width: 480px;
+  margin: 10px auto;
 }
 
 form input,
@@ -394,11 +394,11 @@ form textarea,
 form select {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(235, 200, 180, 0.15);
-  padding: 10px 16px;
+  padding: 12px 18px;
   border-radius: 30px;
   color: #f3ede8;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   outline: none;
   transition: 0.2s;
 }
@@ -417,26 +417,26 @@ form textarea:focus {
 .delivery-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px 30px;
-  padding: 8px 0;
+  gap: 8px 30px;
+  padding: 10px 0;
 }
 
 .delivery-list .item {
-  padding: 5px 0;
+  padding: 6px 0;
   border-bottom: 1px solid rgba(235, 200, 180, 0.06);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 
 .delivery-info {
-  padding: 8px 0;
-  font-size: 1rem;
-  line-height: 1.8;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  line-height: 2;
 }
 
 .delivery-info .row {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
+  padding: 8px 0;
   border-bottom: 1px solid rgba(235, 200, 180, 0.08);
 }
 
@@ -465,14 +465,14 @@ form textarea:focus {
 /* ===== FOOTER ===== */
 footer {
   margin-top: 30px;
-  padding: 18px 0 8px;
+  padding: 20px 0 10px;
   border-top: 1px solid rgba(235, 200, 180, 0.1);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 300;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   gap: 10px 16px;
   color: rgba(243, 237, 232, 0.5);
 }
@@ -516,27 +516,31 @@ html {
   }
   nav {
     justify-content: center;
-    gap: 12px;
+    gap: 14px;
   }
   nav a {
-    font-size: 0.5rem;
-    letter-spacing: 1.5px;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 3.4rem;
   }
   .page-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .nav-logo {
-    height: 32px;
+    height: 55px;
+  }
+  .logo {
+    width: 180px;
+    max-width: 40vw;
   }
   .grid-2col {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 12px;
   }
   .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
   .delivery-list {
     grid-template-columns: 1fr;
@@ -547,6 +551,15 @@ html {
     align-items: center;
     text-align: center;
     gap: 2px;
+  }
+  .sub-title {
+    font-size: 0.7rem;
+  }
+  .menu-section h2 {
+    font-size: 1.6rem;
+  }
+  table {
+    font-size: 0.8rem;
   }
 }
 
@@ -566,40 +579,59 @@ html {
     border-radius: 4px;
   }
   nav {
-    gap: 8px;
+    gap: 10px;
   }
   nav a {
-    font-size: 0.4rem;
-    letter-spacing: 1px;
+    font-size: 0.5rem;
+    letter-spacing: 1.5px;
   }
   h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
   .page-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .nav-logo {
-    height: 28px;
-  }
-  .menu-section {
-    padding: 10px 12px 10px;
-  }
-  .menu-section h2 {
-    font-size: 1.3rem;
+    height: 45px;
   }
   .logo {
-    width: 90px;
+    width: 140px;
+    max-width: 40vw;
+  }
+  .menu-section {
+    padding: 12px 14px 12px;
+  }
+  .menu-section h2 {
+    font-size: 1.4rem;
   }
   .delivery-list .item {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
   .delivery-info {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   .delivery-info .row {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 2px;
+  }
+  .sub-title {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+  }
+  table {
+    font-size: 0.7rem;
+  }
+  th {
+    font-size: 0.55rem;
+  }
+  td {
+    padding: 4px 3px;
+  }
+  .btn {
+    padding: 10px 28px;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
   }
 }
