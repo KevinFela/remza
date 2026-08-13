@@ -152,7 +152,7 @@ body::before {
 }
 
 .nav-logo {
-  height: 70px;
+  height: 100px;  /* ENLARGED AGAIN: was 70px */
   width: auto;
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
   transition: transform 0.3s ease;
@@ -225,8 +225,8 @@ nav a.active::after {
 }
 
 .logo {
-  width: 220px;
-  max-width: 45vw;
+  width: 300px;  /* ENLARGED AGAIN: was 220px */
+  max-width: 55vw;  /* ENLARGED AGAIN: was 45vw */
   height: auto;
   filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
   transition: transform 0.4s ease;
@@ -607,11 +607,11 @@ html {
     font-size: 2rem;
   }
   .nav-logo {
-    height: 55px;
+    height: 75px;  /* ENLARGED AGAIN: was 55px */
   }
   .logo {
-    width: 180px;
-    max-width: 40vw;
+    width: 220px;  /* ENLARGED AGAIN: was 180px */
+    max-width: 50vw;
   }
   .grid-2col {
     grid-template-columns: 1fr;
@@ -679,11 +679,11 @@ html {
     font-size: 1.6rem;
   }
   .nav-logo {
-    height: 45px;
+    height: 60px;  /* ENLARGED AGAIN: was 45px */
   }
   .logo {
-    width: 140px;
-    max-width: 40vw;
+    width: 180px;  /* ENLARGED AGAIN: was 140px */
+    max-width: 50vw;
   }
   .menu-section {
     padding: 12px 14px 12px;
