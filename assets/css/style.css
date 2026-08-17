@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -152,7 +151,7 @@ body::before {
 }
 
 .nav-logo {
-  height: 130px;  /* ENLARGED AGAIN: was 100px */
+  height: 130px;
   width: auto;
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
   transition: transform 0.3s ease;
@@ -225,8 +224,8 @@ nav a.active::after {
 }
 
 .logo {
-  width: 380px;  /* ENLARGED AGAIN: was 300px */
-  max-width: 65vw;  /* ENLARGED AGAIN: was 55vw */
+  width: 380px;
+  max-width: 65vw;
   height: auto;
   filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
   transition: transform 0.4s ease;
@@ -390,6 +389,22 @@ h1 {
   margin: 10px 0 6px;
   color: #d9a58b;
   letter-spacing: 0.5px;
+}
+
+/* ===== DISCLAIMER - FIXED ===== */
+.menu-section .disclaimer {
+  font-size: 0.7rem;
+  font-weight: 300;
+  opacity: 0.55;
+  font-style: italic;
+  letter-spacing: 0.3px;
+  margin-top: -2px;
+  margin-bottom: 10px;
+  text-align: left;
+  border-left: 2px solid rgba(235, 200, 180, 0.15);
+  padding-left: 12px;
+  color: #f3ede8;
+  line-height: 1.4;
 }
 
 table {
@@ -607,10 +622,10 @@ html {
     font-size: 2rem;
   }
   .nav-logo {
-    height: 95px;  /* ENLARGED AGAIN: was 75px */
+    height: 95px;
   }
   .logo {
-    width: 280px;  /* ENLARGED AGAIN: was 220px */
+    width: 280px;
     max-width: 60vw;
   }
   .grid-2col {
@@ -648,6 +663,9 @@ html {
     font-size: 0.65rem;
     letter-spacing: 2px;
   }
+  .menu-section .disclaimer {
+    font-size: 0.65rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -679,10 +697,10 @@ html {
     font-size: 1.6rem;
   }
   .nav-logo {
-    height: 75px;  /* ENLARGED AGAIN: was 60px */
+    height: 75px;
   }
   .logo {
-    width: 220px;  /* ENLARGED AGAIN: was 180px */
+    width: 220px;
     max-width: 55vw;
   }
   .menu-section {
@@ -729,5 +747,9 @@ html {
   .review-bubble span {
     font-size: 0.55rem;
     letter-spacing: 1.5px;
+  }
+  .menu-section .disclaimer {
+    font-size: 0.6rem;
+    padding-left: 8px;
   }
 }
