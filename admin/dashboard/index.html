@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Eatery At Flamingo CMS — Dashboard</title>
+
+  <link rel="icon" type="image/png" href="/assets/images/LOGO.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body class="cms-body">
+
+  <header class="cms-topbar">
+    <a href="/" class="cms-brand">
+      <img src="/assets/images/LOGO.png" alt="Eatery At Flamingo">
+      <span>CMS</span>
+    </a>
+
+    <button id="logout-button" class="text-btn" type="button">
+      Log out
+    </button>
+  </header>
+
+  <main class="dashboard-shell">
+
+    <aside class="sidebar">
+      <button class="nav-btn active" data-view="dashboard">Dashboard</button>
+      <button class="nav-btn" data-view="food">Food</button>
+      <button class="nav-btn" data-view="drinks">Drinks</button>
+      <button class="nav-btn" data-view="hubbly">Hubbly & Cigars</button>
+      <button class="nav-btn" data-view="carwash">Carwash</button>
+      <button class="nav-btn" data-view="delivery">Delivery</button>
+      <button class="nav-btn" data-view="settings">Settings</button>
+    </aside>
+
+    <section class="content">
+
+      <section id="dashboard-view" class="view active">
+        <div class="view-header">
+          <div>
+            <p class="eyebrow">OVERVIEW</p>
+            <h1>Dashboard</h1>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span>Menu Sections</span>
+            <strong id="sections-count">—</strong>
+          </article>
+
+          <article class="stat-card">
+            <span>Menu Items</span>
+            <strong id="items-count">—</strong>
+          </article>
+
+          <article class="stat-card">
+            <span>Delivery Areas</span>
+            <strong id="delivery-count">—</strong>
+          </article>
+        </div>
+
+        <div class="panel">
+          <p class="eyebrow">QUICK ACTIONS</p>
+          <div class="action-row">
+            <button class="primary-btn" id="quick-add-item">+ Add Menu Item</button>
+            <button class="secondary-btn" id="quick-add-section">+ Add Section</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="food-view" class="view menu-view" data-page="food">
+        <div class="view-header">
+          <div><p class="eyebrow">MENU</p><h1>Food</h1></div>
+          <div class="action-row">
+            <button class="secondary-btn add-section-btn" data-page="food">+ Section</button>
+            <button class="primary-btn add-item-btn" data-page="food">+ Item</button>
+          </div>
+        </div>
+        <div class="menu-page-content"></div>
+      </section>
+
+      <section id="drinks-view" class="view menu-view" data-page="drinks">
+        <div class="view-header">
+          <div><p class="eyebrow">MENU</p><h1>Drinks</h1></div>
+          <div class="action-row">
+            <button class="secondary-btn add-section-btn" data-page="drinks">+ Section</button>
+            <button class="primary-btn add-item-btn" data-page="drinks">+ Item</button>
+          </div>
+        </div>
+        <div class="menu-page-content"></div>
+      </section>
+
+      <section id="hubbly-view" class="view menu-view" data-page="hubbly">
+        <div class="view-header">
+          <div><p class="eyebrow">MENU</p><h1>Hubbly & Cigars</h1></div>
+          <div class="action-row">
+            <button class="secondary-btn add-section-btn" data-page="hubbly">+ Section</button>
+            <button class="primary-btn add-item-btn" data-page="hubbly">+ Item</button>
+          </div>
+        </div>
+        <div class="menu-page-content"></div>
+      </section>
+
+      <section id="carwash-view" class="view menu-view" data-page="carwash">
+        <div class="view-header">
+          <div><p class="eyebrow">SERVICES</p><h1>Carwash</h1></div>
+          <div class="action-row">
+            <button class="secondary-btn add-section-btn" data-page="carwash">+ Section</button>
+            <button class="primary-btn add-item-btn" data-page="carwash">+ Item</button>
+          </div>
+        </div>
+        <div class="menu-page-content"></div>
+      </section>
+
+      <section id="delivery-view" class="view">
+        <div class="view-header">
+          <div><p class="eyebrow">DELIVERY</p><h1>Delivery Areas</h1></div>
+          <button class="primary-btn" id="add-delivery-area">+ Area</button>
+        </div>
+
+        <div class="panel">
+          <div id="delivery-list" class="simple-list"></div>
+        </div>
+      </section>
+
+      <section id="settings-view" class="view">
+        <div class="view-header">
+          <div><p class="eyebrow">WEBSITE</p><h1>Settings</h1></div>
+        </div>
+
+        <form id="settings-form" class="panel settings-grid">
+          <div class="field">
+            <label>Email</label>
+            <input id="setting-email" type="email">
+          </div>
+
+          <div class="field">
+            <label>Phone</label>
+            <input id="setting-phone" type="text">
+          </div>
+
+          <div class="field">
+            <label>Opening Hours</label>
+            <input id="setting-opening-hours" type="text">
+          </div>
+
+          <div class="field">
+            <label>Carwash Hours</label>
+            <input id="setting-carwash-hours" type="text">
+          </div>
+
+          <div class="field field-wide">
+            <label>Address</label>
+            <input id="setting-address" type="text">
+          </div>
+
+          <div class="field">
+            <label>Delivery Fee</label>
+            <input id="setting-delivery-fee" type="text">
+          </div>
+
+          <div class="field">
+            <label>Free Delivery</label>
+            <input id="setting-free-delivery" type="text">
+          </div>
+
+          <div class="field field-wide">
+            <button class="primary-btn" type="submit">Save Settings</button>
+            <p id="settings-message" class="form-message"></p>
+          </div>
+        </form>
+      </section>
+
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="section-modal">
+    <div class="modal">
+      <div class="modal-head">
+        <div><p class="eyebrow">MENU SECTION</p><h2 id="section-modal-title">Add Section</h2></div>
+        <button class="text-btn modal-close" type="button">[ x ]</button>
+      </div>
+
+      <form id="section-form">
+        <input type="hidden" id="section-id">
+        <input type="hidden" id="section-page">
+
+        <div class="field">
+          <label>Section Name</label>
+          <input id="section-name" type="text" required>
+        </div>
+
+        <div class="field">
+          <label>Subtitle / Note</label>
+          <input id="section-subtitle" type="text" placeholder="Optional">
+        </div>
+
+        <div class="field">
+          <label>Sort Order</label>
+          <input id="section-sort-order" type="number" min="0" value="0">
+        </div>
+
+        <label class="check-row">
+          <input id="section-active" type="checkbox" checked>
+          <span>Visible on website</span>
+        </label>
+
+        <button class="primary-btn full" type="submit">Save Section</button>
+        <p id="section-message" class="form-message"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="item-modal">
+    <div class="modal">
+      <div class="modal-head">
+        <div><p class="eyebrow">MENU ITEM</p><h2 id="item-modal-title">Add Item</h2></div>
+        <button class="text-btn modal-close" type="button">[ x ]</button>
+      </div>
+
+      <form id="item-form">
+        <input type="hidden" id="item-id">
+
+        <div class="field">
+          <label>Section</label>
+          <select id="item-section" required></select>
+        </div>
+
+        <div class="field">
+          <label>Item Name</label>
+          <input id="item-name" type="text" required>
+        </div>
+
+        <div class="field">
+          <label>Description</label>
+          <textarea id="item-description" rows="3" placeholder="Optional"></textarea>
+        </div>
+
+        <div class="price-grid">
+          <div class="field">
+            <label>Price</label>
+            <input id="item-price" type="text" placeholder="R85">
+          </div>
+
+          <div class="field">
+            <label>Small Price</label>
+            <input id="item-price-small" type="text" placeholder="R90">
+          </div>
+
+          <div class="field">
+            <label>Large Price</label>
+            <input id="item-price-large" type="text" placeholder="R110">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Sort Order</label>
+          <input id="item-sort-order" type="number" min="0" value="0">
+        </div>
+
+        <label class="check-row">
+          <input id="item-active" type="checkbox" checked>
+          <span>Available / visible</span>
+        </label>
+
+        <button class="primary-btn full" type="submit">Save Item</button>
+        <p id="item-message" class="form-message"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="delivery-modal">
+    <div class="modal">
+      <div class="modal-head">
+        <div><p class="eyebrow">DELIVERY</p><h2 id="delivery-modal-title">Add Area</h2></div>
+        <button class="text-btn modal-close" type="button">[ x ]</button>
+      </div>
+
+      <form id="delivery-form">
+        <input type="hidden" id="delivery-id">
+
+        <div class="field">
+          <label>Area Name</label>
+          <input id="delivery-name" type="text" required>
+        </div>
+
+        <div class="field">
+          <label>Sort Order</label>
+          <input id="delivery-sort-order" type="number" min="0" value="0">
+        </div>
+
+        <label class="check-row">
+          <input id="delivery-active" type="checkbox" checked>
+          <span>Visible</span>
+        </label>
+
+        <button class="primary-btn full" type="submit">Save Area</button>
+        <p id="delivery-message" class="form-message"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/admin/dashboard.js"></script>
+</body>
+</html>
