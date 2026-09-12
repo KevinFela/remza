@@ -10,13 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
-<body>
+<body data-menu-page="hubbly">
   <div class="wrapper">
-    <!-- HEADER WITH LOGO & NAV -->
+
     <header class="site-header">
       <a href="food.html" class="logo-link">
         <img src="../assets/images/LOGO.png" alt="Eatery At Flamingo" class="nav-logo" />
       </a>
+
       <nav>
         <a href="food.html">Food</a>
         <a href="drinks.html">Drinks</a>
@@ -26,44 +27,24 @@
       </nav>
     </header>
 
-    <div class="grid-2col">
-      <div class="menu-section"><h2>Shisha</h2>
-        <table><tr><th>Shisha</th><th class="price-col">Price</th></tr>
-          <tr><td>Egyptian</td><td class="price-col">R250</td></tr>
-          <tr><td>German Ice Cooled</td><td class="price-col">R300</td></tr>
-          <tr><td>Refill</td><td class="price-col">R150</td></tr>
-        </table>
-      </div>
-
-      <div class="menu-section"><h2>Cigars</h2>
-        <table><tr><th>Cigar</th><th class="price-col">Price</th></tr>
-          <tr><td>Nick</td><td class="price-col">R550</td></tr>
-          <tr><td>My Father The Jude</td><td class="price-col">R650</td></tr>
-          <tr><td>My Father Jaime Garcia</td><td class="price-col">R550</td></tr>
-          <tr><td>My Father Blue</td><td class="price-col">R650</td></tr>
-          <tr><td>Oliver Milano</td><td class="price-col">R650</td></tr>
-          <tr><td>Nub Maduro</td><td class="price-col">R450</td></tr>
-          <tr><td>Nub Connecticut</td><td class="price-col">R400</td></tr>
-          <tr><td>Nub Cameroon</td><td class="price-col">R400</td></tr>
-          <tr><td>FH</td><td class="price-col">R400</td></tr>
-          <tr><td>Maleko</td><td class="price-col">R500</td></tr>
-          <tr><td>Plasencia Alma</td><td class="price-col">R850</td></tr>
-        </table>
-      </div>
+    <div id="dynamic-menu" class="dynamic-menu-grid two-column">
+      <div class="menu-loading">Loading menu...</div>
     </div>
 
     <footer>
-      <div><a href="mailto:info@eateryflamingo.co.za">info@eateryflamingo.co.za</a></div>
-      <div><a href="tel:+27621369848">+27 62 136 9848</a></div>
-      <div>Open Daily: 12PM – Till Late</div>
-      <div>Flamingo Avenue, Kagiso 1754</div>
+      <div><a id="footer-email" href="mailto:info@eateryflamingo.co.za">info@eateryflamingo.co.za</a></div>
+      <div><a id="footer-phone" href="tel:+27621369848">+27 62 136 9848</a></div>
+      <div id="footer-hours">Open Daily: 12PM – Till Late</div>
+      <div id="footer-address">Flamingo Avenue, Kagiso 1754</div>
     </footer>
   </div>
 
-  <!-- Floating Review Bubble -->
-  <a href="https://www.google.com/search?sca_esv=5108c5d7485823d0&sxsrf=APpeQnt1F_SPWdYscnKZdPUrAJWnJIfecQ:1786574213589&q=eatery+at+flamingo&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_31kBnTtF7E1ZFhzxNQFP4IiCURBuR8m0vvRRQQnQyioGZvoGCbxywXcwIjeZ_4lU7WbR15l4YLff4FmmBv7tn6xTqWCmZD0bbrueZ21ypIws-q-WQ%3D%3D&sa=X&ved=2ahUKEwi5pvbKk5yWAxVXSkEAHa7mHa0QrrQLegQIIBAA&biw=1536&bih=776&dpr=1.25&pli=1&authuser=1#lrd=0x1e95a332ca206c2d:0x38d7c0745a6bb351,3,,,," target="_blank" class="review-bubble">
-    <span>Leave a Review</span>
-    <div class="pulse"></div>
-  </a>
+  <a class="review-bubble" href="https://www.google.com/search?sca_esv=5108c5d7485823d0&amp;sxsrf=APpeQnt1F_SPWdYscnKZdPUrAJWnJIfecQ:1786574213589&amp;q=eatery+at+flamingo&amp;si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_31kBnTtF7E1ZFhzxNQFP4IiCURBuR8m0vvRRQQnQyioGZvoGCbxywXcwIjeZ_4lU7WbR15l4YLff4FmmBv7tn6xTqWCmZD0bbrueZ21ypIws-q-WQ%3D%3D&amp;sa=X&amp;ved=2ahUKEwi5pvbKk5yWAxVXSkEAHa7mHa0QrrQLegQIIBAA&amp;biw=1536&amp;bih=776&amp;dpr=1.25&amp;pli=1&amp;authuser=1#lrd=0x1e95a332ca206c2d:0x38d7c0745a6bb351,3,,,," target="_blank">
+<span>Leave a Review</span>
+<div class="pulse"></div>
+</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../assets/js/script.js"></script>
 </body>
 </html>

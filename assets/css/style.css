@@ -753,3 +753,62 @@ html {
     padding-left: 8px;
   }
 }
+
+/* =========================================================
+   DYNAMIC MENU / SUPABASE ADDITIONS
+   ========================================================= */
+
+.dynamic-menu-grid {
+  width: 100%;
+}
+
+.dynamic-menu-grid.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.dynamic-menu-grid.two-column > .menu-section {
+  margin-bottom: 0;
+}
+
+.dynamic-menu-grid.two-column > .menu-section:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.menu-loading,
+.menu-error,
+.menu-empty {
+  padding: 28px 20px;
+  text-align: center;
+  color: rgba(243, 237, 232, 0.65);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.menu-item-description {
+  display: block;
+  margin-top: 3px;
+  color: rgba(243, 237, 232, 0.5);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.delivery-list.dynamic-delivery-list {
+  min-height: 40px;
+}
+
+[data-setting] {
+  transition: opacity 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .dynamic-menu-grid.two-column {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dynamic-menu-grid.two-column > .menu-section:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+}
